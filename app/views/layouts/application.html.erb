@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	 <title>Muxyshop</title>
+	 <%= csrf_meta_tags %>
+
+	 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+	 <!-- Top menu - Promo del dia -->
+
+	 <div id="top">
+		<div class="container">
+			<div class="row">
+				 
+				 <div class="col-md-6 offer" data-animate="fadeInDown">
+					  <a href="#" class="btn btn-success btn-sm" data-animate-hover="shake">Oferta del dia</a>  <a > 35% de descuento en guitarras acusticas </a>
+				 </div>
+				 <div class="col-md-6 " data-animate="fadeInDown">
+					  <ul class="menu">
+					<% if signed_in?    %>
+						 <li>
+							<%= link_to " Salir" , destroy_user_session_path, method: :delete ,type:"button" %>
+						 </li>
+					  <% else   %>
+						 <li>
+							<%= link_to " Registrate" , new_user_registration_path  %> 
+						 </li>
+						 <li>
+							<%= link_to " Ingresar" , new_user_session_path     %>
+						 </li>
+					<% end    %>
+						<li><a href="#">Contactanos</a>
+					  </ul>
+
+				 </div>
+			</div>
+		</div>
+
+	 </div>
+<!-- End Top menu-->
+
+<!-- Nav bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<div class="col">
+ 		 <a class="navbar-brand" href="#">MuxyShop</a>
+	</div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<!-- menu nav bar -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	  	<ul class="nav navbar-nav navbar-left">
+	  		<!-- TIenda -->
+		  <li class="active"><a href="/">Tienda</a>
+		  </li>
+		  <li class="dropdown yamm-fw">
+		  	<!-- categorias -->
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Categorias <b class="caret"></b>
+				</a>
+				   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+						<div class="dropdown-item">
+	
+							<div class="col-sm-3">
+								  <h5>Guitarras </h5>
+								  <ul>
+										<li><a href="category.html">Electricas</a>
+										</li>
+										<li><a href="category.html">electro acusticas</a>
+										</li>
+										<li><a href="category.html">acusticas </a>
+										</li>
+
+								  </ul>
+							</div>
+							<!-- Divisor -guitarras-->
+							<div class="dropdown-divider"></div>
+							<!-- Divisor end -->
+							<div class="col-sm-3">
+							  <h5>Bajos</h5>
+							  <ul>
+									<li><a href="category.html">Electricos</a>
+									</li>
+									<li><a href="category.html">Electroacusticos</a>
+									</li>
+							  </ul>
+						 	</div>
+							<!-- Divisor -guitarras-->
+							<div class="dropdown-divider"></div>
+							<!-- Divisor end -->
+							<div class="col-sm-3">
+							  <h5>Accessorios</h5>
+							  <ul>
+									<li><a href="category.html">Afinadores</a>
+									</li>
+									<li><a href="category.html">Plumillas</a>
+									</li>
+									<li><a href="category.html">
+									  Correas
+									</a>
+									</li>
+									<li><a href="category.html">Trasnportadores</a>
+									</li>
+									<li><a href="category.html">Lineas</a>
+									</li>
+								</li>
+							  </ul>
+							</div>
+					</div>
+		  	</li>
+		  <!-- mas  -->
+			<li class="dropdown yamm-fw">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Mas <b class="caret"></b></a>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<div class="dropdown-item">
+						<% if signed_in?    %>
+						<div class="col-sm-3">
+							<h5>Usuario </h5>
+							  <ul>
+									<li>
+										<%= link_to 'Perfil', edit_user_registration_path %>
+									</li>
+									<li>
+										<%= link_to " Salir" , destroy_user_session_path, method: :delete ,type:"button" %>
+									</li>
+									<li><a href="customer-orders.html">Opciones</a>
+									</li>	
+											
+							  </ul>
+						</div>		
+						<% end %>
+						<div class="dropdown-divider"></div>
+						<div class="col-sm-3">
+							<h5>Comunidad </h5>
+							  <ul>
+									<li>
+										<a href="">
+											Blog
+										</a>
+									</li>
+									<li>
+										<a href="/">
+											Tips
+										</a>
+									</li>
+									<li><a href="customer-orders.html">Recomendados</a>
+									</li>	
+									<div class="dropdown-divider"></div>		
+							  </ul>
+						</div>	
+	
+
+					</div>
+
+				</div>
+			</li>
+		</ul>
+  </div>
+  <!-- Carrito de compras -->
+	<div class="navbar-buttons">
+
+	 <div class="navbar-collapse collapse right" id="basket-overview">
+		  <a href="/" class="btn btn-primary navbar-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+		  <span class="hidden-sm">Carrito</span></a>
+	 </div>
+	 <!--/.nav-collapse -->
+	</div>
+
+
+</div>
+</nav>
+<!-- Noticias y alertas -->
+	<div class="mesagge">
+		 <p class="notice"><%= notice %></p>
+		 <p class="alert"><%= alert %></p>
+
+	</div>
+
+	 <%= yield %>
+  </body
+></html>
