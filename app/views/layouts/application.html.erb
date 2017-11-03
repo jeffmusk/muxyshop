@@ -45,7 +45,8 @@
 <!-- Nav bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="col">
- 		 <a class="navbar-brand" href="#">MuxyShop</a>
+		<img width ='150px' src="https://muxyshop.mabisy.com/server/Portal_0015761/img/logo.png" alt="">
+ 		 
 	</div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,9 +56,9 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	  	<ul class="nav navbar-nav navbar-left">
 	  		<!-- TIenda -->
-		  <li class="active"><a href="/">Tienda</a>
+		  <li class="active mb-2"><a href="/">Muxyshop</a>
 		  </li>
-		  <li class="dropdown yamm-fw">
+		  <li class="dropdown yamm-fw mb-2">
 		  	<!-- categorias -->
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Categorias <b class="caret"></b>
 				</a>
@@ -112,7 +113,7 @@
 					</div>
 		  	</li>
 		  <!-- mas  -->
-			<li class="dropdown yamm-fw">
+			<li class="dropdown yamm-fw mb-2">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Mas <b class="caret"></b></a>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 					<div class="dropdown-item">
@@ -137,11 +138,6 @@
 							<h5>Comunidad </h5>
 							  <ul>
 									<li>
-										<a href="">
-											Blog
-										</a>
-									</li>
-									<li>
 										<a href="/">
 											Tips
 										</a>
@@ -156,6 +152,9 @@
 					</div>
 
 				</div>
+			</li>
+			<li class="dropdown yamm-fw">
+				<a href="#" class="" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Blog </a>
 			</li>
 		</ul>
   </div>
@@ -173,11 +172,7 @@
 </div>
 </nav>
 <!-- Noticias y alertas -->
-	<div class="mesagge">
-		 <p class="notice"><%= notice %></p>
-		 <p class="alert"><%= alert %></p>
-
-	</div>
+			    <p class="alert alert-success" style=" <%= 'display:none ;'if  notice.nil? && alert.nil?  %>"><%= notice  %><%= alert %>
 
 	 <%= yield %>
   </body

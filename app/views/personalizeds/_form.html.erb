@@ -1,0 +1,22 @@
+<%= form_with(model: personalized, local: true) do |form| %>
+  <% if personalized.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(personalized.errors.count, "error") %> prohibited this personalized from being saved:</h2>
+
+      <ul>
+      <% personalized.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :estampado %>
+    <%= form.text_field :estampado, id: :personalized_estampado %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -15,3 +15,11 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+$(document).on('turbolinks:load',function(){
+
+		$('.carousel').carousel({
+		  interval: 2500
+		})      
+});
+
+

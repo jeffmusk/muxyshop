@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <form>
+    <div class="form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Nombre</label>
+      <div class="col-sm-10">
+        <h5 class="form-control">
+          <%= @product.nombre.capitalize %>
+        </h5>
+        
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword" class="col-sm-2 col-form-label">Precio</label>
+      <div class="col-sm-10">
+        <h5  class="form-control" > <%= @product.precio %>   </h5>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword" class="col-sm-2 col-form-label">Descripcion :</label>
+      <div class="col-sm-10">
+        <h5  class="form-control" > <%= @product.descripcion %>   </h5>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword" class="col-sm-2 col-form-label">Categoria :</label>
+      <div class="col-sm-4">
+        <h5  class="form-control" > <%= @product.categoria %>   </h5>
+      </div>
+      <label for="inputPassword" class="col-sm-2 col-form-label">Subcategoria:</label>
+      <div class="col-sm-4">
+        <h5  class="form-control" > <%= @product.subcategoria %>  </h5>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-7 mt-5">
+      <div class="ventana">
+        <div class="capa1">
+
+        </div>
+
+        <div class="capa2">
+
+        </div>
+
+        <div class="capa3" >
+          <img class="img-fluid" src=<%= @product.img_vacia %> alt="">
+        </div>
+      </div>
+    </div>
+    <div class="col-4 mt-5">
+      <div class="col">
+      Estampado
+
+      </div>
+      <div class="col- mt-2">
+        colores
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+<p>
+  <strong>Img:</strong>
+  <%= @product.img %>
+</p>
+      <img src=<%= @product.img %> alt="">
+
+
+
+<%= link_to 'Editar', edit_product_path(@product) %> |
+<%= link_to 'Atras', products_path %>

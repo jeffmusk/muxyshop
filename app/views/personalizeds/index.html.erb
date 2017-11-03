@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Personalizeds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Estampado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @personalizeds.each do |personalized| %>
+      <tr>
+        <td><%= personalized.estampado %></td>
+        <td><%= link_to 'Show', personalized %></td>
+        <td><%= link_to 'Edit', edit_personalized_path(personalized) %></td>
+        <td><%= link_to 'Destroy', personalized, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Personalized', new_personalized_path %>

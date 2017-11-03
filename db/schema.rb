@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171027154454) do
+ActiveRecord::Schema.define(version: 20171103215059) do
+
+  create_table "personalizeds", force: :cascade do |t|
+    t.string "estampado"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "nombre"
+    t.decimal "precio"
+    t.text "descripcion"
+    t.string "img"
+    t.decimal "cantidad"
+    t.string "categoria"
+    t.string "subcategoria"
+    t.string "img_vacia"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :personalizeds
+  resources :products
+
+  get '/personalizar/:id', to: 'products#personalizar'
+
   devise_for :users
   authenticated :user do
   	root  "welcome#index"
