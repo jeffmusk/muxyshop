@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get 'accesorios/index'
+
+  get 'accesorios/show'
+
+  get 'electroacusticos/index'
+
+  get 'electroacusticos/show'
+
+  get 'electricos/index'
+
+  get 'electricos/show'
+
+  get 'acusticas/index'
+
+  get 'acusticas/show'
+
   get 'electroacusticas/index'
 
   get 'electroacusticas/show'

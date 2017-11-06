@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @personalizeds = Personalized.all
+    
   end
 
   # GET /products/new

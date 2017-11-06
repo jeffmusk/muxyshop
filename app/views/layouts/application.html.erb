@@ -16,7 +16,7 @@
 			<div class="row">
 				 
 				 <div class="col-md-6 offer" data-animate="fadeInDown">
-					  <a href="#" class="btn btn-success btn-sm" data-animate-hover="shake">Oferta del dia</a>  <a > 35% de descuento en guitarras acusticas </a>
+					  <a href="/acusticas/index" class="btn btn-success btn-sm" data-animate-hover="shake">Oferta del dia</a>  <a > 35% de descuento en guitarras acusticas </a>
 				 </div>
 				 <div class="col-md-6 " data-animate="fadeInDown">
 					  <ul class="menu">
@@ -72,9 +72,9 @@
 								  <ul>
 										<li><a href="/products">Electricas</a>
 										</li>
-										<li><a href="electroacusticas/index">electro acusticas</a>
+										<li><a href="/electroacusticas/index">Electro acusticas</a>
 										</li>
-										<li><a href="category.html">acusticas </a>
+										<li><a href="/acusticas/index">Acusticas </a>
 										</li>
 
 								  </ul>
@@ -85,9 +85,9 @@
 							<div class="col-sm-3">
 							  <h5>Bajos</h5>
 							  <ul>
-									<li><a href="category.html">Electricos</a>
+									<li><a href="/electricos/index">Electricos</a>
 									</li>
-									<li><a href="category.html">Electroacusticos</a>
+									<li><a href="/electroacusticos/index">Electroacusticos</a>
 									</li>
 							  </ul>
 						 	</div>
@@ -97,17 +97,17 @@
 							<div class="col-sm-3">
 							  <h5>Accessorios</h5>
 							  <ul>
-									<li><a href="category.html">Afinadores</a>
+									<li><a href="/accesorios/index">Afinadores</a>
 									</li>
-									<li><a href="category.html">Plumillas</a>
+									<li><a href="/accesorios/index">Plumillas</a>
 									</li>
-									<li><a href="category.html">
+									<li><a href="/accesorios/index">
 									  Correas
 									</a>
 									</li>
-									<li><a href="category.html">Trasnportadores</a>
+									<li><a href="/accesorios/index">Trasnportadores</a>
 									</li>
-									<li><a href="category.html">Lineas</a>
+									<li><a href="/accesorios/index">Lineas</a>
 									</li>
 								</li>
 							  </ul>
@@ -178,5 +178,169 @@
 			    </p>
 
 	 <%= yield %>
+
+	   	<div id="footer" data-animate="fadeInUp">
+  			<div class="container">
+  					<div class="row">
+  							<div class="col-md-3 col-sm-6">
+  									<h4>Paginas</h4>
+
+  									<ul>
+  											<li><a href="text.html">Categoria</a>
+  											</li>
+  											<li><a href="text.html">Opciones</a>
+  											</li>
+  											<li><a href="faq.html">Blog</a>
+  											</li>
+  											<li><a href="contact.html">Contactanos</a>
+  											</li>
+  									</ul>
+
+  									<hr>
+
+  									<h4>Seccion de usuarios</h4>
+
+  									<ul>
+  											<li>
+                          <%= link_to " Ingresar" , new_user_session_path     %>
+  											</li>
+  											<li>
+                          <%= link_to " Registrate" , new_user_registration_path  %>
+  											</li>
+  									</ul>
+
+  									<hr class="hidden-md hidden-lg hidden-sm">
+
+  							</div>
+  							<!-- /.col-md-3 -->
+
+  							<div class="col-md-3 col-sm-6">
+
+  									<h4>Top categorias</h4>
+
+  									<h5>Guitarras</h5>
+
+  									<ul>
+  											<li><a href="/">acusticas</a>
+  											</li>
+  											<li><a href="/">electroacusticas</a>
+  											</li>
+  											<li><a href="/">electricas</a>
+  											</li>
+  									</ul>
+
+  									<h5>Accesorios</h5>
+  									<ul>
+  											<li><a href="/">Afinadores </a>
+  											</li>
+  											<li><a href="/">Plumillas</a>
+  											</li>
+  											<li><a href="/">Correas</a>
+  											</li>
+  											<li><a href="/">Trasnportadores</a>
+  											</li>
+  									</ul>
+
+  									<hr class="hidden-md hidden-lg">
+
+  							</div>
+  							<!-- /.col-md-3 -->
+
+  							<div class="col-md-3 col-sm-6">
+
+  									<h4>Encuentranos  </h4>
+
+  									<p><strong>MuxyShop</strong>
+  											<br> calle 13b 13-52
+  											<br>Bogota
+  											
+  											<br>
+  											<strong>Colombia</strong>
+  									</p>
+
+  									
+
+  									<hr class="hidden-md hidden-lg">
+
+  							</div>
+  							<!-- /.col-md-3 -->
+
+
+
+  							<div class="col-md-3 col-sm-6">
+
+  									<h4>Suscribete a nuestro newsletter</h4>
+
+  									<p class="text-muted">Los mejores consejos para musicos novatos y experimentados</p>
+
+  									<form>
+  											<div class="input-group">
+
+  													<input type="text" class="form-control">
+
+  													<span class="input-group-btn">
+
+  		<button class="btn btn-default" type="button">Subscribete!</button>
+
+  </span>
+
+  											</div>
+  											<!-- /input-group -->
+  									</form>
+
+  									<hr>
+
+  									<h4>Redes sociales</h4>
+
+  									<p class="social">
+  											<a href="https://www.facebook.com/MuxyShop-1937980333189186/" class="facebook external" data-animate-hover="shake"><i class="fa fa-facebook"></i></a>
+  											<a href="#" class="twitter external" data-animate-hover="shake"><i class="fa fa-twitter"></i></a>
+  											<a href="#" class="instagram external" data-animate-hover="shake"><i class="fa fa-instagram"></i></a>
+  											<a href="#" class="email external" data-animate-hover="shake"><i class="fa fa-envelope"></i></a>
+  									</p>
+
+
+  							</div>
+  							<!-- /.col-md-3 -->
+
+  					</div>
+  					<!-- /.row -->
+
+  			</div>
+  			<!-- /.container -->
+  	</div>
+  	<!-- /#footer -->
+
+  	<!-- *** FOOTER END *** -->
+
+
+
+
+  	<!-- *** COPYRIGHT ***
+  _________________________________________________________ -->
+  	<div id="copyright">
+
+  			
+  			<div class="container">
+  					<div class="col-md-6">
+  							<p class="pull-left">© 2017 Muxyshop.</p>
+  					</div>
+  					<div class="col-md-6">
+  							<p class="pull-right">Hecho por  <a href="">Jeferson guerrero</a><a href="">,  Nicolas Rozo</a>
+  								
+  					
+  					</div>
+  		</div>
+  					
+  		
+  	</div>
+  	<!-- *** COPYRIGHT END *** -->
+
+
+
+  </div>
+  <!-- /#all -->
+
+
   </body
 ></html>

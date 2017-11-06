@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Guitarras electricas</h1>
+    </div>
+  </div>
+
+
+
+<div class="card-columns">
+  <% @products.each do |product| %>
+      
+
+  <div class="card mr-1" style="width: 19rem;">
+    <img class="card-img-top" src="<%= product.img %>" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title"><%= product.nombre %></h4>
+      <p class="card-text"><%= product.descripcion %></p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><%= product.precio.to_i %></li>
+        <li class="list-group-item">
+        <strong>
+          Disponibles:
+        </strong>
+         <%= product.cantidad.to_i %>
+       </li>
+       <li class="list-group-item">
+        <strong>
+          Categoria:
+        </strong>
+          <%= product.categoria %>
+       </li>
+       <li class="list-group-item">
+        <strong>
+          Subcategoria:
+        </strong>
+         <%= product.subcategoria %>
+       </li>
+        
+    </ul>
+    <div class="card-body">
+      <%= link_to 'perzonalizar', product ,class:"btn btn-primary" %>
+    </div>
+
+      <%= link_to 'Editar', edit_product_path(product) %>
+      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+
+
+    <% end %>
+  </div>
+
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>
+</div>
