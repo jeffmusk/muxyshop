@@ -38,8 +38,10 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-group :development, :test do
-  
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+
 end
 
 group :development, :test do
