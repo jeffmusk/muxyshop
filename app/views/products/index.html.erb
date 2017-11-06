@@ -46,8 +46,8 @@
       <%= link_to 'perzonalizar', product ,class:"btn btn-primary" %>
     </div>
 
-      <%= link_to 'Editar', edit_product_path(product) %>
-      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Editar', edit_product_path(product),class:"btn btn-info" %>
+      <%= link_to 'Destruir', product, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-info" %>
   </div>
 
 
@@ -57,5 +57,14 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'Nuevo producto', new_product_path ,class:"btn btn-secondary"%>
 </div>
+
+<!--         <% if signed_in? %>
+        <li> <%= link_to "Nuevo Pin"   %></li>
+                
+          <li><%= link_to "Salir", destroy_user_session_path, :method => :delete %></li>
+        <% else %>
+          <li> <%= link_to "Registrarse" , new_user_registration_path %></li>
+          <li> <%= link_to "Ingresar" , new_user_session_path %></li>
+        <% end %> -->

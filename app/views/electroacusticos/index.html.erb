@@ -40,11 +40,11 @@
         
     </ul>
     <div class="card-body">
-      <%= link_to 'perzonalizar', product ,class:"btn btn-primary" %>
+      <%= link_to 'Perzonalizar', product ,class:"btn btn-primary" %>
     </div>
 
-      <%= link_to 'Editar', edit_product_path(product) %>
-      <%= link_to 'Destruir', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Editar', edit_product_path(product),class:"btn btn-info"  %>
+      <%= link_to 'Destruir', product, method: :delete, data: { confirm: 'Are you sure?' } class:"btn btn-info" %>
   </div>
 
 
