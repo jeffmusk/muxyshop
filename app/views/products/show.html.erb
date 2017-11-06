@@ -1,7 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
+  <div class="row ">
+    <div class="col">
+
+      <%= link_to 'Editar', edit_product_path(@product) %> |
+      <%= link_to 'Atras', products_path %>
+
+    </div>
+  </div>
+
+<!-- menu descripcion -->
+
   <form>
+    <div class="form-group row">
+      <label for="inputPassword" class="col-sm-2 col-form-label">Categoria :</label>
+      <div class="col-sm-4">
+        <h5  class="form-control" > <%= @product.categoria %>   </h5>
+      </div>
+      <label for="inputPassword" class="col-sm-2 col-form-label">Subcategoria:</label>
+      <div class="col-sm-4">
+        <h5  class="form-control" > <%= @product.subcategoria %>  </h5>
+      </div>
+    </div>
     <div class="form-group row">
       <label for="staticEmail" class="col-sm-2 col-form-label">Nombre</label>
       <div class="col-sm-10">
@@ -14,7 +35,7 @@
     <div class="form-group row">
       <label for="inputPassword" class="col-sm-2 col-form-label">Precio</label>
       <div class="col-sm-10">
-        <h5  class="form-control" > <%= @product.precio %>   </h5>
+        <h5  class="form-control" > <%= @product.precio.to_i %>   </h5>
       </div>
     </div>
     <div class="form-group row">
@@ -23,62 +44,110 @@
         <h5  class="form-control" > <%= @product.descripcion %>   </h5>
       </div>
     </div>
-    <div class="form-group row">
-      <label for="inputPassword" class="col-sm-2 col-form-label">Categoria :</label>
-      <div class="col-sm-4">
-        <h5  class="form-control" > <%= @product.categoria %>   </h5>
-      </div>
-      <label for="inputPassword" class="col-sm-2 col-form-label">Subcategoria:</label>
-      <div class="col-sm-4">
-        <h5  class="form-control" > <%= @product.subcategoria %>  </h5>
-      </div>
-    </div>
   </form>
 </div>
 
 
+<!-- fin menu descripcion -->
+
+
+
+
+
 <div class="container">
   <div class="row">
-    <div class="col-7 mt-5">
+    <div class="col-md-8 mt-5">
       <div class="ventana">
-        <div class="capa1">
-
-        </div>
-
-        <div class="capa2">
-
-        </div>
-
-        <div class="capa3" >
+         <div class="capa3" >
           <img class="img-fluid" src=<%= @product.img_vacia %> alt="">
+        </div>
+        
+        <div class="capa2 col-7" styel="background-color: black">
+          <!-- Estampado     estampado -->
+            <img class="img-fluid" id="estampado" src="https://lh3.google.com/u/0/d/1y1laWS8FOtihrDYj6_Cceh28sTFSqQFO=w1024-h614-iv1" alt="">
+  
         </div>
       </div>
     </div>
-    <div class="col-4 mt-5">
-      <div class="col">
-      Estampado
+    <!-- herramientas de personalizacion -->
+    <div class="col-md-4 mt-5 col-sm-12">
+        <div class="row ml-5 herramientas ">
+            <div class="row">
+              <div class="col-12">
+                <h3>
+                  Colores
+                </h3>
+              </div>
+            </div>
 
-      </div>
-      <div class="col- mt-2">
-        colores
+            <div class="row ml-2 ">
+              <div class=" ml-1" id="rojo"></div>
+              <div class=" ml-1" id="cafe"></div>
+              <div class=" ml-1" id="azul"></div>
+            </div>
+            <div class="row mt-1 ml-2">
+              <div class=" ml-1" id="naranja"></div>
+              <div class=" ml-1" id="blanco"></div>
+              <div class=" ml-1" id="verde"></div>
+            </div>
+            <div class="row mt-1 ml-2">
+              <div class=" ml-1" id="morado"></div>
+              <div class=" ml-1" id="gris"></div>
+              <div class=" ml-1" id="oro"></div>
+            </div>
+            <!-- fila estampados -->
+            <div class="row mt-4  ml-3">
+              <h4>Estampados</h4>
+            </div>
+            <div class="row mt-3  ">
+              <div class="row ml-1 mb-2">
+                <div class="col-md-6 col-sm-12 " id="est1">
+                  <img src="https://lh3.google.com/u/0/d/1y1laWS8FOtihrDYj6_Cceh28sTFSqQFO=w1024-h614-iv1" alt="" class="estampados">
+                </div>
+                <div class="col-md-6 col-sm-12" id="est2">
+                  <img src="https://lh3.google.com/u/0/d/1-UBKTXpMWTM7GM9OsSEFmp2vf8S4kfXH=w1024-h614-iv1" alt="" class="estampados">
+                </div>
+            </div>
 
+            <div class="row ml-1 mb-2">
+
+                <div class="col-md-6 col-sm-12 " id="est3" >
+                  <img src="https://lh3.google.com/u/0/d/1uSIxhphLNI2c0MbhK_Y0HXSAo2WC-xcz=w1024-h364-iv1" alt="" class="estampados">
+                </div>
+                <div class="col-md-6 col-sm-12" id="est4">
+                  <img src="https://lh3.google.com/u/0/d/19Emsa9_l1N6F2hFZUk66IOQgaJp--lJd=w1024-h364-iv1" alt="" class="estampados">
+                </div>
+            </div>
+
+            <div class="row ml-1 mb-2">
+
+                <div class="col-md-6 col-sm-12 " id="est5">
+                  <img src="https://lh3.google.com/u/0/d/1D1dXMyXjHpJPxS7Lia62EBFK_Oq_CM_h=w1024-h364-iv1" alt="" class="estampados">
+                </div>
+                <div class="col-md-6 col-sm-12 " id="est6">
+                  <img src="https://lh3.google.com/u/0/d/1nsRx9Q_p8TUmpFg4y9MV4x3WO8VCZQUR=w1024-h364-iv1" alt="" class="estampados">
+                </div>
+            </div>
+
+            <div class="row ml-1 mb-2" >
+
+                <div class="col-md-6 col-sm-12 " id="est7">
+                  <img src="https://lh3.google.com/u/0/d/1Z848ogLT3aoDV4ybaB2nd9bXrF6I7a_K=w1024-h364-iv1" alt="" class="estampados">
+                </div>
+                <div class="col-md-6 col-sm-12 " id="est8" >
+                  <img src="https://lh3.googleusercontent.com/BXuRiAEHfxTVVfY2yocJapybO7y7atOYLbg5qYeaEc1plyYTDyQuOq8oiNWp3mcR4Qn5vE5ng7G8kv7AmVyEPidKlQv6DWFFYUp5eIwRF-L-T5DMPZBcRQ1kdUczZb2yUgdcieEvusZMgNWoLvmEPaWN2p0H3YNesGRz7aiALqyIlP8HkjpxOH4jNF4W5swSBfM_E0Up6J1keci8-Hmb-tshok-m-jt3E_ieZnHBqUp1PDhNBTzrrzehVwoMhdQOGqHZPDSKOZ2k9xsmDd7u4v8O9w9sNJnHn-psrAmRHWG72SMTXG_QGnuV5yX7qfKb-ao8FCAiRN2tiOGMyDQ4qVRx8AQs1sMBET_0bqt2p6Ap4CVRNTrkNwufqOJ9WqwUdwmUwAmb14ztM4xwcuaxFelMyxLFFbE8CvsCuPhjE-f564nsL9QsPgw4H05wJAqt2wVDo6PNiWgiZCBTa-2G9hIMj5r9-7lFvFxmSTo5wY12Yo13Us7xydKPQ-Ml24A7QvQiH4pRP5Sp69Vp0X2jY07wurvlMd7d9NGt1S1Q3mJqD-KRY1eug2TAUs-3n2f2CXM=w1024-h614" alt="" class="estampados">
+                </div>
+            </div>
+
+            
+             
+ 
+
+            </div> 
+        </div>
       </div>
 
     </div>
   </div>
 </div>
 
-
-
-
-  
-<p>
-  <strong>Img:</strong>
-  <%= @product.img %>
-</p>
-      <img src=<%= @product.img %> alt="">
-
-
-
-<%= link_to 'Editar', edit_product_path(@product) %> |
-<%= link_to 'Atras', products_path %>

@@ -4,12 +4,13 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = Product.all.where(subcategoria: 'electricas') 
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    @personalizeds = Personalized.all
   end
 
   # GET /products/new
@@ -22,6 +23,8 @@ class ProductsController < ApplicationController
   end
 
   def perzonalizar
+  
+
 
   end
 
@@ -46,7 +49,7 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
-        format.html { redirect_to @product, notice: 'Producto actualizado' }
+        format.html { redirect_to products_path, notice: 'Producto actualizado' }
         format.json { render :show, status: :ok, location: @product }
       else
         format.html { render :edit }

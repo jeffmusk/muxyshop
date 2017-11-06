@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Estampado:</strong>
-  <%= @personalized.estampado %>
+	<img src=<%= @personalized.estampado %> alt="" style="max-width: 250px">
 </p>
 
 <%= link_to 'Edit', edit_personalized_path(@personalized) %> |

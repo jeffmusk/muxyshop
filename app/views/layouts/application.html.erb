@@ -59,8 +59,10 @@
 		  <li class="active mb-2"><a href="/">Muxyshop</a>
 		  </li>
 		  <li class="dropdown yamm-fw mb-2">
-		  	<!-- categorias -->
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Categorias <b class="caret"></b>
+		  	<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Categoria <b class="caret"></b></a>
+		  	<!-- categorias 
+		  	<%= link_to 'Categorias', products_path, class:"dropdown-toggle" %>
+				-->
 				</a>
 				   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 						<div class="dropdown-item">
@@ -68,9 +70,9 @@
 							<div class="col-sm-3">
 								  <h5>Guitarras </h5>
 								  <ul>
-										<li><a href="category.html">Electricas</a>
+										<li><a href="/products">Electricas</a>
 										</li>
-										<li><a href="category.html">electro acusticas</a>
+										<li><a href="electroacusticas/index">electro acusticas</a>
 										</li>
 										<li><a href="category.html">acusticas </a>
 										</li>
@@ -173,6 +175,7 @@
 </nav>
 <!-- Noticias y alertas -->
 			    <p class="alert alert-success" style=" <%= 'display:none ;'if  notice.nil? && alert.nil?  %>"><%= notice  %><%= alert %>
+			    </p>
 
 	 <%= yield %>
   </body

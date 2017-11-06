@@ -1,5 +1,110 @@
+.capa2 {
+	z-index: 2;
+	position: absolute;
+
+
+}
+
+
 .capa3 {	
-	background: red;
+	width:100%;
+	z-index: 3;
+	position: absolute;
 
+}
 
+.maximo{
+	widows: 100px;
+}
+.herramientas{
+	background: #FFFFFF;
+	border:2px solid #A3A3A3;
+	padding: 10px;
+	padding-left:5px
+}
+#rojo{
+	width: 70px ;
+	height: 70px;
+	background: #C72525;
+	border:1px solid #A3A3A3;
+	cursor:pointer; 
+	padding:1em; 
+}
+
+#cafe{
+	width:70px ;
+	height: 70px;
+	background: #9F6161;
+	border:1px solid #A3A3A3;
+	cursor:pointer; 
+	padding:1em; 
+}
+#azul{
+	width:70px ;
+	height: 70px;
+	background: #6895D0;
+	border:1px solid #A3A3A3;
+	cursor:pointer; 
+	padding:1em; 
+}
+
+#naranja{
+	width:70px ;
+	height: 70px;
+	background: #E6611D;
+	border:1px solid #A3A3A3;
+	cursor:pointer; 
+	padding:1em; 
+}
+#blanco{
+	width:70px ;
+	height: 70px;
+	background: #FFFFFF;
+	border:2px solid #A3A3A3;
+	cursor:pointer; 
+	padding:1em; 
+}
+#verde{
+	width:70px ;
+	height: 70px;
+	background: #4FC979;
+	border:1px solid #A3A3A3;
+	cursor:pointer; 
+	padding:1em; 
+}
+#morado{
+	width:70px ;
+	height: 70px;
+	background: #AE6ED6;
+	border:1px solid #A3A3A3;
+	cursor:pointer; 
+	padding:1em; 
+}
+#gris{
+	width:70px ;
+	height: 70px;
+	background: #838383;
+	border:1px solid #A3A3A3;
+	cursor:pointer; 
+	padding:1em; 
+}
+#oro{
+	width:70px ;
+	height: 70px;
+	background: #D5AC29;
+	border:1px solid #A3A3A3;
+	cursor:pointer; 
+	padding:1em; 
+}
+.es{
+	width: 50px;
+	border:1px solid #A3A3A3;
+	cursor:pointer; 
+}
+
+.estampados{
+	width:100px;
+	height: 100px;
+	cursor:pointer; 
+	border:1px solid #A3A3A3;
 }
